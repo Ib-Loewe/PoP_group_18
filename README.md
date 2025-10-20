@@ -1,0 +1,1 @@
+Remote workspace for sharing code and referencing each others work. Branches are inteded to be kept in order to keep code as "personal".

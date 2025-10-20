@@ -16,7 +16,7 @@ let hasPropertyTwoTest f (n: int, k: int) : bool =
     f (n, k) = f (n - 1, k - 1) + f (n - 1, k) 
 
 let hasPropertyTwo (n, k) : bool =
-    hasPropertyTwoTest pascalNoRec (n,k)
+    hasPropertyTwoTest pascal (n,k)
 
 let hasPropertyTwoNoRec ( n , k) : bool =
     hasPropertyTwoTest pascalNoRec (n,k)

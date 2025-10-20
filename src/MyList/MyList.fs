@@ -1,8 +1,8 @@
 module MyList
 
 type 'a MyList = 
-    |Empty 
-    |Something of 'a * 'a MyList
+    | Empty 
+    | Something of 'a * 'a MyList
 
 
 //Takes an integer n and a MyList, and returns a MyList of the first n elements in the original list.

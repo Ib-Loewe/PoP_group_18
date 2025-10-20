@@ -11,4 +11,4 @@ let hasPropertyTwo (n , k) : bool =
 
 
 //hasPropertyTwoNoRec: int * int -> bool
-let hasPropertyTwoNoRec ( n , k) : bool =
+let hasPropertyTwoNoRec ( n , k) : bool = false

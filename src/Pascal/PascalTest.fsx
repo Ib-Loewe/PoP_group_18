@@ -24,11 +24,9 @@ let hasPropertyTwoNoRec ( n , k) : bool =
 
 // Following is the property tests for the recursive and iterative implementation
 // let n = 1_078_456_392 // a random integer in the middle of the input domain ± 10 million
-let n = 49
+let n = 20
 
 let max = 2_147_483_647
-
-pascal (34, 17) |> printfn "%A"
 
 printfn "Recursive Property 1:"
 printfn "- (0,0): %A" (hasPropertyOne (0, 0))
@@ -49,18 +47,18 @@ printfn "- (n,n/2): %A" (hasPropertyTwo (n,n/2))
 //printfn "- (max,1): %A" (hasPropertyTwo (max,1))
 //printfn "- (max-1,max-2): %A" (hasPropertyTwo (max - 1, max-2))
 
-//printfn "Iterative Property 1:"
-//printfn "- (0,0): %A" (hasPropertyOneNoRec (0, 0))
-//printfn "- (1,1): %A" (hasPropertyOneNoRec (1, 1))
+printfn "Iterative Property 1:"
+printfn "- (0,0): %A" (hasPropertyOneNoRec (0, 0))
+printfn "- (1,1): %A" (hasPropertyOneNoRec (1, 1))
 //printfn "- (max,0): %A" (hasPropertyOneNoRec (max, 0))
 //printfn "- (max,max): %A" (hasPropertyOneNoRec (max, max))
-//printfn "- (n,n): %A" (hasPropertyOneNoRec (n, n))
-//printfn "- (n,0): %A" (hasPropertyOneNoRec (n, 0))
-//
-//printfn "Iterative Property 2:"
-//printfn "- (2,1): %A" (hasPropertyTwoNoRec (2,1))
-//printfn "- (n,n-1): %A" (hasPropertyTwoNoRec (n,n-1))
-//printfn "- (n,n/2): %A" (hasPropertyTwoNoRec (n,n/2))
+printfn "- (n,n): %A" (hasPropertyOneNoRec (n, n))
+printfn "- (n,0): %A" (hasPropertyOneNoRec (n, 0))
+
+printfn "Iterative Property 2:"
+printfn "- (2,1): %A" (hasPropertyTwoNoRec (2,1))
+printfn "- (n,n-1): %A" (hasPropertyTwoNoRec (n,n-1))
+printfn "- (n,n/2): %A" (hasPropertyTwoNoRec (n,n/2))
 //printfn "- (max-1,max-2): %A" (hasPropertyTwoNoRec (max - 1, max-2))
 //printfn "- (max-1,n): %A" (hasPropertyTwoNoRec (max-1,n))
 //printfn "- (max-1,1): %A" (hasPropertyTwoNoRec (max-1,1))

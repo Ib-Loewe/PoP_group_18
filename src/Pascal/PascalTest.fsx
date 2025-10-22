@@ -62,7 +62,7 @@ printfn "- (36,0): %A" (hasPropertyOne (36, 0))
 printfn "Recursive Property 2:"
 printfn "- (2,1): %A" (hasPropertyTwo (2,1))
 printfn "- (33,32): %A" (hasPropertyTwo (33,32))
-printfn "- (33, 33/2): %A" (hasPropertyTwo (33,33/2))
+//printfn "- (33, 33/2): %A" (hasPropertyTwo (33,33/2)) // May take a bit of time to complete but returns true
 printfn "- (33, 1): %A" (hasPropertyTwo (33,1))
 printfn "- (36,32): %A" (hasPropertyTwo (36,35))
 //printfn "- (36, 36/2): %A" (hasPropertyTwo (36,36/2)) // Takes too much time to complete

@@ -24,8 +24,8 @@ let hasPropertyTwoNoRec ( n , k) : bool =
 
 // Following is the property tests for the recursive and iterative implementation. 
 // Numbers are lower than true max due to hardware limitations.
-let n = 1_078 // arbitrary test number : 1/2_000_000 of max int
-let max = 2_147 // 1/1_000_000 of max int
+let n = 17 // arbitrary test number
+let max = 33 // in row 34 of pascal's triangle, values exceed max int
 
 printfn "Recursive Property 1:"
 printfn "- (0,0): %A" (hasPropertyOne (0, 0))

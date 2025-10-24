@@ -4,11 +4,11 @@ module Pascal
 // pascal: int * int -> int
 let rec pascal (n: int, k: int) : int = 
     // check for natural numbers and than n >= k
-    if k <= 0 && n <= 0 && n >= k then
+    if k >= 0 && n >= 0 && n >= k then
         match n, k with 
         | _, 0 -> 1
         | n, k when n = k -> 1
-        | _ -> pascal (n - 1, k - 1) + pascal (n - 1, k)
+        | _ , _ -> pascal (n - 1, k - 1) + pascal (n - 1, k)
     else
         //printf "pascal must be called with two natural numbers, n and k with n >= k"
         0
@@ -34,6 +34,7 @@ let pascalNoRec (n: int, k: int) : int =
         // fill in the matrix using pascal's rule, skipping the first 2 rows and the left edges
         for i = 2 to n do
             for j = 1 to matrix[i].Length - 1 do
+                // check for right edge (middle element)
                 if j = matrix[i].Length - 1 then
                     // handle middle element with mirroring property
                     if i % 2 = 0 then

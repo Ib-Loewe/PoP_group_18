@@ -13,6 +13,9 @@ let rec pascal (n: int, k: int) : int =
         //printf "pascal must be called with two natural numbers, n and k with n >= k"
         0
 
+
+// Takes a pair of natural numbers n and k, and returns the corresponding binomial coefficient for n choose k.
+// pascalFactCalc: int * int -> int
 let pascalNoRec (n: int, k: int) : int =
     // check for natual numberso and than n >= k
     if n < k || k < 0 then

@@ -22,17 +22,30 @@ let pascalNoRec (n: int, k: int) : int =
     else if n = k || k = 0 then
         1
     else
-        // create 2d array (matrix) to store values, initialized to 1
+        // initialize matrix
         let matrix : int array array = Array.zeroCreate (n + 1)
         for i = 0 to n do
-            matrix.[i] <- Array.create (i + 1) 1
-        // fill in the matrix using pascal's rule
+            // each row i has (i/2)+1 elements, since pascal's triangle is symmetric
+            matrix.[i] <- Array.create ((i/2)+1) 1
+        
+        // fill in the matrix using pascal's rule, skipping the first 2 rows and the left edges
         for i = 2 to n do
-            for j = 1 to i - 1 do
-                matrix.[i].[j] <- matrix.[i - 1].[j - 1] + matrix.[i - 1].[j]
-        // return matrix value n choose k
-        matrix.[n].[k]
+            for j = 1 to matrix[i].Length - 1 do
+                if j = matrix[i].Length then
+                    // handle middle element with mirroring property
+                    if i % 2 = 0 then
+                        matrix.[i].[j] <- matrix.[i - 1].[j - 1] * 2
+                    else
+                        matrix.[i].[j] <- matrix.[i].[i - j] + matrix.[i - 1].[j - 2]
+                // normal case
+                else // pascal's rule
+                    matrix.[i].[j] <- matrix.[i - 1].[j - 1] + matrix.[i - 1].[j]
 
+        // return matrix value n choose k
+        if k < (n/2)+1 then
+            matrix.[n].[k]
+        else
+            matrix.[n].[n - k]
 
 // factorial helper function
 let rec factorial n = 

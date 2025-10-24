@@ -64,5 +64,3 @@ printfn "- (max-1,1): %A" (hasPropertyTwoNoRec (max-1,1))
 printfn "- (max,max-1): %A" (hasPropertyTwoNoRec (max, max-1))
 printfn "- (max,n): %A" (hasPropertyTwoNoRec (max,n))
 printfn "- (max,1): %A" (hasPropertyTwoNoRec (max,1)) 
-
-

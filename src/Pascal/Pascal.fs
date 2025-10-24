@@ -31,12 +31,12 @@ let pascalNoRec (n: int, k: int) : int =
         // fill in the matrix using pascal's rule, skipping the first 2 rows and the left edges
         for i = 2 to n do
             for j = 1 to matrix[i].Length - 1 do
-                if j = matrix[i].Length then
+                if j = matrix[i].Length - 1 then
                     // handle middle element with mirroring property
                     if i % 2 = 0 then
                         matrix.[i].[j] <- matrix.[i - 1].[j - 1] * 2
                     else
-                        matrix.[i].[j] <- matrix.[i].[i - j] + matrix.[i - 1].[j - 2]
+                        matrix.[i].[j] <- matrix.[i - 1].[j] + matrix.[i - 1].[j - 1]
                 // normal case
                 else // pascal's rule
                     matrix.[i].[j] <- matrix.[i - 1].[j - 1] + matrix.[i - 1].[j]

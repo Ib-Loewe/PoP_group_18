@@ -22,9 +22,10 @@ let hasPropertyTwoNoRec ( n , k) : bool =
     hasPropertyTwoTest pascalNoRec (n,k)
 
 
-// Following is the property tests for the recursive and iterative implementation
-let n = 1_078_456_392 // a random integer in the middle of the input domain ± 10 million
-let max = 2_147_483_647
+// Following is the property tests for the recursive and iterative implementation. 
+// Numbers are lower than true max due to hardware limitations.
+let n = 1_078 // arbitrary test number : 1/2_000_000 of max int
+let max = 2_147 // 1/1_000_000 of max int
 
 printfn "Recursive Property 1:"
 printfn "- (0,0): %A" (hasPropertyOne (0, 0))

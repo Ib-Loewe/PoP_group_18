@@ -1,0 +1,12 @@
+No GenAI used during the execution of solving the code problems.
+No querries related to solving the problem.
+
+Sources for information:
+https://www.geeksforgeeks.org/maths/pascals-triangle-formula/
+https://en.wikipedia.org/wiki/Pascal%27s_triangle
+Lecture powerpoints
+
+Co-Pilot use:
+Co-pilot was used only for completion of repetative code, i.e. examples.
+Co-pilot was also enabled when writing code and recommended auto-completion was enabled. 
+For the most part it was ignored, but was precent.
